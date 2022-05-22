@@ -1,11 +1,12 @@
 # Pico y Placa predictor
-This program can predict wether or not a car can be on the road based on the past pico y placa [restrictions](httphttps://ecuador.seguros123.com/todo-lo-que-debes-saber-del-famoso-pico-y-placa/:// "restrictions").
+This program can predict whether or not a car can be on the road based on the past pico y placa [restrictions](httphttps://ecuador.seguros123.com/todo-lo-que-debes-saber-del-famoso-pico-y-placa/:// "restrictions").
 
 according to the pico y placa we have the following rules:
-    - schedule:
-    	-  morning: 7:00 - 9:30.
-      	- evening: 16:00 - 19:30.
-    - based on the schedule, cars with the following last digit can not be on the road:
+- schedule:
+      - morning: 7:00 - 9:30.
+      - evening: 16:00 - 19:30.
+
+- based on the schedule, cars with the following last digit on the placa cannot be on the road:
       - Monday: 1 and 2.
       - Tuesday: 3 and 4
       - Wednesday: 5 and 6.
@@ -20,7 +21,7 @@ according to the pico y placa we have the following rules:
 ### Project structure
 * placa/: has the following clases:
 	* Placa: represents instances of placas and validates them according to the ecuadorian law. 
-	PicoPlacaPredictor: the class that help us to predict wether or not the vehicle can be on the road based on the pico y placa rules.
+	PicoPlacaPredictor: the class that helps us to predict whether or not the vehicle can be on the road based on the pico y placa rules.
 	
 * tests/: has the tests suites for both the Placa class and the PicoPlacaPredictor.
 * requirements.txt: a list of python modules required by the program.
@@ -35,8 +36,8 @@ according to the pico y placa we have the following rules:
 4. run `python main.py -h` for more detal instructions as shown below.
 5. basic usage: `python main.py placa date time` where:
 	* placa: is the string representing the placa number (MUP-8581).
-	* date: a string to represent the date. 
-	* time: an integer to represent the hour when the driver wants to be outside.
+	* date: a string that represents the date. 
+	* time: an integer that represents the hour when the driver wants to be outside.
 
 
 ```bash
