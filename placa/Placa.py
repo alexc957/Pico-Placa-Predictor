@@ -5,6 +5,9 @@ placa_regex = r"^(A|B|U|C|H|X|O|E|W|G|I|L|R|M|V|N|Q|S|P|Y|J|K|T|Z)[A-Z]{2}-\d{2,
 international_placa_regex = r"^(CC|CD|OI|AT|IT)-\d{4}"
 
 class Placa():
+    """
+     Class that represents instances of placas: the validation it is based on wikipedia: https://es.wikipedia.org/wiki/Matr%C3%ADculas_automovil%C3%ADsticas_de_Ecuador
+    """
 
     def __init__(self, identifier):
         
@@ -12,7 +15,7 @@ class Placa():
             raise AttributeError("Invalid placa identifier provided")
         self._identifier = identifier
         self._type = self.__get_placa_type()
-        print('type ', self._type)
+        
         self._color = self.__get_placa_color()
         
 
@@ -32,7 +35,7 @@ class Placa():
 
     def __valitate_placa_identifier(self, identifier):
         """validate if the given placa identifier it is valid or not
-         - args: 
+         - Parameters: 
             - identifier: the placa number: ie AEB-456
         """
         
@@ -41,6 +44,9 @@ class Placa():
         return general_placa_match is not None or international_placa_match is not None
         
     def __get_placa_type(self):
+        """
+            private method to get the placa type.
+        """
         second_letter = self.identifier[1]
         if second_letter in ['A','U','Z']:
             return "COMERCIAL"
@@ -55,6 +61,9 @@ class Placa():
         return 'PARTICULAR'
 
     def __get_placa_color(self):
+        """
+        private method to get the placa color
+        """
         if self.type == 'COMERCIAL':
             return 'orange'
         if self.type in ['GUBERNAMENTAL','USO OFICIAL']:
@@ -68,3 +77,6 @@ class Placa():
         if self.identifier.startswith('IT'):
             return 'red'
         return 'blue'
+
+    def __str__(self) -> str:
+        return f"Placa: {self._identifier}, color: {self._color}, type: {self._type}"
