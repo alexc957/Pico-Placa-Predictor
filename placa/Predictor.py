@@ -30,6 +30,9 @@ restricted_digits_perday = {
 
 
 class PicoPlacaPredictor:
+    """
+        Singleton of PicoPlacaPredictor to use just one instance of the predictor. 
+    """
     __instance = None 
 
     @staticmethod
