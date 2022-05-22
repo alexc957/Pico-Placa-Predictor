@@ -14,7 +14,7 @@ according to the pico y placa we have the following rules:
       - Friday: 9 and 0.
 
 ### requirements
-  - python 3.x+.
+  - python 3.7+.
   - pytest
   - pip.
 
@@ -70,3 +70,5 @@ Your vehicle can be on the road
 D:\Projects\pythonProjects\picoPlacaPredictor>python main.py LUO-8544 17/05/2022 8  
 Your vehicle must not be on the road
 ```
+
+Note: do not use python2.

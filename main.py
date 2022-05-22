@@ -1,7 +1,7 @@
 import argparse
 from placa.Placa import Placa
 from placa.Predictor import PicoPlacaPredictor
-from matplotlib.style import use
+
 
 
 
