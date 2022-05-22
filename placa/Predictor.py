@@ -52,10 +52,11 @@ class PicoPlacaPredictor:
     def __is_outside_of_time_restriction(self, time) -> bool:
         return (time<morning_start_time) or (time>morning_end_time and time<evening_start_time) or (time>evening_end_time)
     
-    def predict(self,placa: Placa, date: str, time:int) -> str:
+    def predict(self,placa: Placa, date: str, time:int,**kargs) -> str:
         driving_datetime = datetime.strptime(f"{date} {time}:00", "%d/%m/%Y %H:%M")
+
        # cls.strategy = MondayStrategy()
-      
+        #if(kargs.get('has_conadis') or kwgars)
         
         day_name = calendar.day_name[driving_datetime.weekday()] 
         time_obj = driving_datetime.time()
