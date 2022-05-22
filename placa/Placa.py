@@ -33,6 +33,9 @@ class Placa():
     def type(self):
         return self._type
 
+    def get_last_digit(self):
+        return self._identifier[-1]
+        
     def __valitate_placa_identifier(self, identifier):
         """validate if the given placa identifier it is valid or not
          - Parameters: 
