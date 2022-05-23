@@ -38,7 +38,7 @@ according to the pico y placa we have the following rules:
 	* placa: is the string representing the placa number (MUP-8581).
 	* date: a string that represents the date. 
 	* time: an integer that represents the hour when the driver wants to be outside.
-
+6. To run the tests just run: `pytest`. 
 
 ```bash
 usage: python main.py placa date time
