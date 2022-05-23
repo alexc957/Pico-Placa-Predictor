@@ -1,4 +1,9 @@
-from ..placa.Placa import Placa
+from sys import platform
+if "win" in platform:
+    from ..placa.Placa import Placa
+else:
+    from placa.Placa import Placa
+
 import pytest
 
 class TestPlaca:

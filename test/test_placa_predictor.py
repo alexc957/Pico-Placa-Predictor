@@ -1,7 +1,13 @@
 import pytest
-from ..placa.Placa import Placa
+from sys import platform
+if "win" in platform:
+    from ..placa.Placa import Placa
 
-from ..placa.Predictor import PicoPlacaPredictor 
+    from ..placa.Predictor import PicoPlacaPredictor 
+else:
+    from placa.Placa import Placa
+
+    from placa.Predictor import PicoPlacaPredictor 
 
 
 class TestPlacaPredictor():
